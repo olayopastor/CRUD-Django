@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <h2>Profesor: </h2>
+    <h3>{{ profesores.name }}</h3>
+    <h5>Edad : {{ profesores.age }} años</h5>
+    <h5>Especialidad : {{ profesores.especialidad}}</h5>
+    {% if profesores.photo %}
+    <center><img src="{{ profesores.photo.url }}" width="600"></center>
+    {% endif %}
+    <a href="{% url 'pro_vista' %}">Regresar</a>
+  </body>
+</html>
+{% endblock %}

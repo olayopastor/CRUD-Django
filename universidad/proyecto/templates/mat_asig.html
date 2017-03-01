@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+<h4> Confirma la materia y/o actividad a asignar </h4>
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Hecho</button>
+</form>
+</div>
+{% endblock %}

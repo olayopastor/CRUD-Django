@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <h2>Alumno: </h2>
+    <h3>{{ alumnos.name }}</h3>
+    <h5>Licenciatura : {{ alumnos.licenciatura}}</h5>
+    <h5>Semestre actual : {{ alumnos.semestre }}</h5>
+    <h5>Materias : {{ alumnos.age }}</h5>
+    {% if alumnos.photo %}
+    <center><img src="{{ alumnos.photo.url }}" width="600"></center>
+    {% endif %}
+    <a href="{% url 'alu_vista' %}">Regresar</a>
+  </body>
+</html>
+{% endblock %}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/proyecto/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/proyecto/2/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/proyecto/2/css/animate.css" rel="stylesheet">
+    <link href="/static/proyecto/2/css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <script src="/static/proyecto/2/js/jquery-2.1.1.min.js"></script>
+    <script src="/static/proyecto/2/js/jquery.appear.js"></script>
+    <script src="/static/proyecto/2/js/jqBootstrapValidation.js"></script>
+    <script src="/static/proyecto/2/js/script.js"></script>
+    <title>Proyecto</title>
+  </head>
+  <body>
+  <div class="row">
+    <div class="col-md-6">
+      <h3><center>Desarrollo de aplicaciones para Internet</center></h3>
+  </div>
+  <div class="col-md-6"><br>
+    <center><a href="{% url 'base' %}" class="btn btn-primary">Menu Principal</a><center>
+  </div>
+  </div>
+{% block content %}
+<div class="mainbody-section text-center">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="menu-item color responsive">
+                          <a href="{% url 'alu_new' %}" data-toggle="modal">
+                              <i class="fa fa-mortar-board"></i>
+                              <p>Nuevo Alumno</p>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="menu-item light-orange responsive-2">
+                          <a href="{% url 'pro_new' %}" data-toggle="modal">
+                              <i class="fa fa-mortar-board"></i>
+                              <p>Nuevo Profesor</p>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="menu-item light-red responsive">
+                          <a href="{% url 'alu_vista' %}" data-toggle="modal">
+                              <i class="fa fa-users"></i>
+                              <p>Ver Alumnos Inscritos</p>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="menu-item blue responsive-2">
+                          <a href="{% url 'pro_vista' %}" data-toggle="modal">
+                              <i class="fa fa-users"></i>
+                              <p>Buscar profesor para asesoria</p>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="menu-item green responsive">
+                          <a href="{% url 'mat_disp' %}" data-toggle="modal">
+                              <i class="fa fa-mortar-board"></i>
+                              <p>Materias Disponibles</p>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="menu-item light-red responsive-2">
+                          <a href="{% url 'mat_vista' %}" data-toggle="modal">
+                              <i class="fa fa-mortar-board"></i>
+                              <p>Asignar materia</p>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+</div>
+{% endblock %}
+</body>
+</html>

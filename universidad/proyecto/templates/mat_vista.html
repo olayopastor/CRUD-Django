@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h4>A que alumno quieres asignar una materia?</h4>
+{% for p in alumnoss %}
+<p>
+  {{ p.name }}
+  <a href="{% url 'mat_asig' p.id %}">Asignar</a>
+</p>
+{% endfor %}
+<a href="{% url 'mat_disp' %}" class="btn btn-default">Materias disponibles</a>
+{% endblock %}

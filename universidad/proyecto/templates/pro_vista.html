@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- <a href="{% url 'alu_new' %}">Nuevo Alumno</a>
+<a href="{% url 'pro_new' %}">Nuevo Profesor</a> -->
+{% for p in object_list %}
+<div class="container-fluid">
+<p>
+  Alumno:
+  <!-- {{ p.name }} - <b>{{ p.age }}</b> - <b>{{ p.licenciatura }}</b> -->
+  {{ p.name }} - <b>{{ p.especialidad }}</b></br>
+  <a href="{% url 'pro_detail' p.id %}">Detalles</a></br>
+  <a href="{% url 'pro_update' p.id %}">Actualizar datos</a></br>
+  <a href="{% url 'pro_delete' p.id %}">Dar de baja</a></br>
+  <!-- {% if p.photo %}
+  <img src="{{ p.photo.url }}" width="200">
+  {% endif %} -->
+</p>
+</div>
+{% endfor %}
+{% endblock %}

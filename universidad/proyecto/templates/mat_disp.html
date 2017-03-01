@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    var materias = [
+      "Bases de Datos",
+      "Programacion",
+      "Ingenieria de software",
+      "Electronica",
+      "Administracion",
+      "Compiladores",
+      "Aplicaciones para Internet",
+      "Redes"
+    ];
+    $( "#materias" ).autocomplete({
+      source: materias
+    });
+  });
+
+  $(function() {
+    var actividades = [
+      "Futbol",
+      "Musica",
+      "Volleyball",
+      "Basquetball",
+      "Pintura",
+      "Canto",
+      "Teatro",
+      "Natacion"
+    ];
+    $( "#actividades" ).autocomplete({
+      source: actividades
+    });
+  });
+  </script>
+</head>
+<div class="ui-widget">
+  <h4>Que materia buscas?</h4>
+  <label for="materias">Materia: </label>
+  <input id="materias"> - <b><a href="{% url 'mat_vista' %}" class="btn btn-default">Asignar a alumno</a></b>
+</div>
+
+<div class="ui-widget">
+  <h4>Extracurriculares</h4>
+  <label for="actividades">Actividad: </label>
+  <input id="actividades"> - <b><a href="{% url 'mat_vista' %}" class="btn btn-default">Asignar a alumno</a></b>
+</div>
+{% endblock %}
